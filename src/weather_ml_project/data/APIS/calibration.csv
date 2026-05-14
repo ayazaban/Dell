@@ -1,0 +1,3 @@
+region_id,variable,correction_factor
+R01,temperature,1.05
+R01,precipitation,0.95

@@ -1,0 +1,4406 @@
+﻿<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns="urn:schemas-microsoft-com:office:spreadsheet">
+<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+<Version>12.00</Version>
+</DocumentProperties>
+<ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+<WindowHeight>8130</WindowHeight>
+<WindowWidth>15135</WindowWidth>
+<WindowHeight>8130</WindowHeight>
+<WindowTopX>120</WindowTopX>
+<WindowTopY>45</WindowTopY>
+<ProtectStructure>False</ProtectStructure>
+<ProtectWindow>False</ProtectWindow>
+</ExcelWorkbook>
+<Styles>
+</Styles>
+<Worksheet ss:Name="ag-grid">
+<Table>
+<Column ss:Width="200"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="70"/>
+<Column ss:Width="200"/>
+<Row>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:MergeAcross="2">
+<Data ss:Type="String">Température  [°C]</Data>
+</Cell>
+<Cell ss:MergeAcross="1">
+<Data ss:Type="String">Point de rosée [°C]</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Rayonnement solaire [W/m2]</Data>
+</Cell>
+<Cell ss:MergeAcross="1">
+<Data ss:Type="String">Déficit de Pression de vapeur [kPa]</Data>
+</Cell>
+<Cell ss:MergeAcross="2">
+<Data ss:Type="String">Humidité Relative  [%]</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Précipitations [mm]</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Humectation foliaire [min]</Data>
+</Cell>
+<Cell ss:MergeAcross="1">
+<Data ss:Type="String">Vitesse du vent [m/s]</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Vitesse du vent max [m/s]</Data>
+</Cell>
+<Cell ss:MergeAcross="1">
+<Data ss:Type="String">Direction du vent [deg]</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Panneau solaire [mV]</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Batterie [mV]</Data>
+</Cell>
+<Cell ss:MergeAcross="2">
+<Data ss:Type="String">DeltaT [°C]</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">Date/heure</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">moy</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">max</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">min</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">moy</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">min</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">moy</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">moy</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">min</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">moy</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">max</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">min</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">Somme</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">time</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">moy</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">max</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">max</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">moy</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">dernier</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">dernier</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">dernier</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">moy</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">max</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">min</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">ET0 [mm]</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-11 07:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.24</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.26</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.23</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.3</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.3</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.86</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.94</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.82</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6055</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-11 06:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.21</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.25</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.17</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.95</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.9</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">70.29</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.35</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6049</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-11 05:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.17</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.15</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.98</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.98</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.22</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.24</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.18</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6058</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-11 04:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.11</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.14</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.08</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.9</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.8</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.99</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.98</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">68.7</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.12</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">68.42</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6055</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-11 03:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.09</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.11</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.8</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.8</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">68.42</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">68.54</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">68.36</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6064</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-11 02:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.92</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.8</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.8</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.95</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.01</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.77</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">68.6</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6058</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-11 01:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.93</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.9</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.7</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.7</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.98</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.98</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">68.78</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">68.89</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">68.71</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">340</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">340</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6052</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-11 00:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.91</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.95</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.87</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.8</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.8</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.16</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.24</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">340</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">340</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6061</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 23:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.9</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.94</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.88</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.7</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.7</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">68.93</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">68.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">68.86</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6069</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 22:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.92</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.95</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.9</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.8</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.8</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">68.98</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.06</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">68.89</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6072</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 21:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.95</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.98</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.93</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.8</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.8</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.14</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.18</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.06</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6066</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 20:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.99</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.94</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.9</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.9</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.23</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.24</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.18</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6064</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 19:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.98</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.01</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.9</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.9</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.24</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.27</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.24</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6072</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 18:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.99</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.02</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.9</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.9</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.24</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.27</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.24</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6075</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 17:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.03</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.99</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.9</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.9</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.3</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.36</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.27</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6066</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 16:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.07</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.01</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.47</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.35</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6075</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 15:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.03</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.61</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.71</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.53</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6075</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 14:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.08</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.07</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.95</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.95</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.77</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.82</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.71</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6075</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 13:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.09</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.12</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.08</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.82</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.82</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.82</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6075</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 12:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.14</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.08</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.82</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.82</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.82</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6086</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 11:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.13</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.17</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.95</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.95</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.89</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.94</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.82</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6086</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 10:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.16</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.13</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.95</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.95</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">70.02</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">70.06</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6081</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 09:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.19</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.22</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.18</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.3</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.3</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.95</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.95</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">70.09</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">70.11</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">70.06</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6086</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 08:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.21</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.26</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.18</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.3</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.3</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.95</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.95</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.98</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">70.06</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.88</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6083</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 07:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.23</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.17</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.82</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.85</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.82</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6086</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 06:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.15</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.18</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.12</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.66</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.82</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.56</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6086</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 05:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.13</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.17</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.11</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.48</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.56</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.41</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6089</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 04:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.12</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.15</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.43</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.47</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.41</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6098</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 03:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.14</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.16</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.12</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.54</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.71</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.44</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6098</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 02:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.14</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.17</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.11</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">19.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.72</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.88</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.65</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6095</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 01:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.08</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.14</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.03</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.9</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.7</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.95</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">69.14</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">70.12</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.96</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">341</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6098</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-10 00:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.98</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.5</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.02</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.01</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.41</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">68.13</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">343</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">343</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6098</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.5</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 23:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.3</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.3</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.03</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.87</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.26</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.57</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">343</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">343</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6109</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 22:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.98</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.01</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.5</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.62</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.42</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">345</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">345</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6103</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 21:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.03</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.06</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.06</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.46</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.51</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.45</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">345</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">345</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6112</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 20:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.01</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.03</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">24.99</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.3</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.3</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.57</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.62</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.51</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">345</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">345</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6112</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 19:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.03</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.07</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.02</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.3</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.3</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.72</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.8</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.65</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">345</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">345</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6112</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 18:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.06</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.09</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.9</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.8</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6123</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 17:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.08</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.09</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.06</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.5</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.5</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.09</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6112</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 16:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.09</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.13</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.07</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.5</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.5</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.12</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.14</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.09</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6118</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 15:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.12</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.14</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.5</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.5</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.22</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.26</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6123</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 14:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.15</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.19</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.13</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.6</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.6</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.31</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.38</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.26</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6123</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 13:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.18</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.22</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.17</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.6</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.6</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.35</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.38</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.32</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6126</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 12:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.23</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.26</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.21</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.7</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.7</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.25</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.29</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6132</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 11:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.26</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.31</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.23</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.7</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.7</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.13</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.08</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6135</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 10:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.34</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.41</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.29</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.7</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.7</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.06</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.06</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.95</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">67.03</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.85</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6132</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 09:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.45</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.54</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.36</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.7</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.7</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.08</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.07</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.66</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.79</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.44</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6140</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 08:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.64</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.75</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.56</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.7</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.7</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.11</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.1</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">65.84</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.39</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">65.16</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">346</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6140</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">5</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">5</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 07:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.02</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.2</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.06</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.28</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.57</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">65.29</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">329</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">329</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6044</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">5</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 06:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.04</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.09</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.3</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.3</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.63</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.74</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.56</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">329</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">329</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6044</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 05:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.06</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.09</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.02</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.86</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.77</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">329</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">329</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6041</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 04:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.08</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.11</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.07</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.93</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.91</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">329</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">329</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6041</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 03:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.11</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.14</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.08</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.5</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.5</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.92</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.97</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.91</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">329</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">329</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6032</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 02:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.14</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.18</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.12</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.5</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.5</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.91</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.94</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.91</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">329</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">329</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6032</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2019-06-09 01:00:00</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.15</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.18</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">25.13</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.5</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">18.5</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">1.05</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.91</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.91</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">66.91</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">329</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">329</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">6038</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">4</Data>
+</Cell>
+<Cell>
+<Data ss:Type="Number">0.6</Data>
+</Cell>
+</Row>
+</Table>
+</Worksheet>
+</Workbook>
