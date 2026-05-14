@@ -45,3 +45,5 @@ uvicorn api.app:app --reload --host 0.0.0.0 --port 8000
 - Le pipeline lit les fichiers ERA5/Open-Meteo/NASA POWER et les fichiers terrain Excel.
 - Les variables de type méta-données et identifiants sont exclus du training pour éviter le leakage.
 - Le remplissage NaN utilise une médiane locale par région/mois, avec fallback par interpolation et 0.
+<img width="959" height="506" alt="image" src="https://github.com/user-attachments/assets/5888983b-d3ce-42d2-81d9-9d26a686b8f1" />
+<img width="959" height="461" alt="image" src="https://github.com/user-attachments/assets/bb038746-5dd8-423a-879d-916a9977deca" />
