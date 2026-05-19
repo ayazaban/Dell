@@ -31,34 +31,39 @@ def run_pipeline() -> None:
     ensure_directory(MODEL_OUTPUT_DIR)
     ensure_directory(FIGURES_DIR)
 
+    print("[1/6] Chargement des donnees terrain...", flush=True)
     terrain = load_terrain_data(TERRAIN_ROOT)
     if terrain.empty:
-        print("Aucun fichier terrain détecté. Le pipeline continue avec les sources satellite uniquement.")
+        print("     Aucun fichier terrain detecte. Pipeline satellite uniquement.", flush=True)
     else:
-        print(f"Données terrain chargées: {len(terrain)} lignes journalières")
+        print(f"     {len(terrain)} lignes journalieres chargees.", flush=True)
 
+    print("[2/6] Chargement des donnees satellite...", flush=True)
     satellite_daily = load_satellite_data(OPENMETEO_PATH, NASA_PATH)
     satellite_daily = calibrate_satellite_data(satellite_daily, CALIBRATION_PATH)
     era5_monthly = load_era5_monthly(ERA5_PATH)
-    print(f"Données satellite journalières chargées: {len(satellite_daily)} enregistrements")
-    print(f"Données ERA5 mensuelles chargées: {len(era5_monthly)} enregistrements")
+    print(f"     {len(satellite_daily)} enregistrements satellite, {len(era5_monthly)} ERA5.", flush=True)
 
+    print("[3/6] Fusion des sources...", flush=True)
     df = merge_daily_sources(terrain, satellite_daily, era5_monthly)
-    print(f"Données fusionnées journalières: {len(df)} lignes")
+    print(f"     {len(df)} lignes fusionnees.", flush=True)
 
+    print("[4/6] Nettoyage et feature engineering...", flush=True)
     cleaned_df = clean_dataset(df)
     cleaned_df.to_csv(PROCESSED_ROOT / "cleaned_data.csv", index=False)
     df_features = build_features(cleaned_df)
 
     train_data, val_data, test_data = train_test_split_chronological(df_features)
-    print("Train / val / test sizes:", len(train_data), len(val_data), len(test_data))
+    print(f"     Train={len(train_data)}  Val={len(val_data)}  Test={len(test_data)}", flush=True)
 
+    print("[5/6] Entrainement des modeles (Optuna ~5 min)...", flush=True)
     model_artifacts = train_models(train_data, val_data)
 
+    print("[6/6] Evaluation et sauvegarde...", flush=True)
     evaluate_models(model_artifacts, val_data, test_data)
     save_predictions(model_artifacts, test_data, MODEL_OUTPUT_DIR)
 
-    print("Pipeline terminé. Modèles et prédictions enregistrés dans:")
-    print(f"- {MODEL_OUTPUT_DIR}")
-    print(f"- {PROCESSED_ROOT}")
+    print("\nPipeline termine. Modeles et predictions dans:", flush=True)
+    print(f"  {MODEL_OUTPUT_DIR}", flush=True)
+    print(f"  {PROCESSED_ROOT}", flush=True)
 
