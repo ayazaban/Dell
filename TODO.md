@@ -1,6 +1,5 @@
-# TODO - Fix prédiction “Année complète” température constante
+# TODO
 
-- [ ] 1) Mettre à jour `src/weather_ml_project/models/predict.py` : calculer `clim_features` à partir de `region_data_engineered` (et non `region_data` brut) pour que les colonnes de lags soient présentes.
-- [ ] 2) Ajouter un garde-fou : compter les features manquantes vs `feature_cols` pour diagnostiquer rapidement.
-- [ ] 3) Relancer `python main.py` (pipeline) pour régénérer les artefacts si nécessaire, puis relancer l’app Streamlit et tester “Année complète”.
+- [ ] Fix training crash: `mean_squared_error(..., squared=False)` not supported in installed scikit-learn (1.8.0).
+- [ ] Re-run `python main.py` to verify pipeline proceeds to next stage.
 
