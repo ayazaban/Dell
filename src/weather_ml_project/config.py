@@ -10,9 +10,6 @@ ERA5_PATH = APIS_ROOT / "extraction_gee_20260423_154703.csv"
 OPENMETEO_PATH = APIS_ROOT / "extraction_open_meteo_20260503_012319.csv"
 NASA_PATH = APIS_ROOT / "extraction_nasa_power_quotidienne_20260503_012720.csv"
 CALIBRATION_PATH = APIS_ROOT / "calibration.csv"
-CALIBRATION_OPENMETEO_PATH = APIS_ROOT / "calibration_openmeteo.csv"
-CALIBRATION_NASA_PATH = APIS_ROOT / "calibration_nasa.csv"
-CALIBRATION_ERA5_PATH = APIS_ROOT / "calibration_era5.csv"
 PROCESSED_ROOT = REPO_ROOT / "data_processed"
 
 METADATA_EXCLUSIONS = [

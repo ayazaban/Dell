@@ -7,52 +7,6 @@ from weather_ml_project.config import METADATA_EXCLUSIONS, TARGET_COLUMNS
 from weather_ml_project.utils.helpers import normalize_columns
 
 
-def clean_source(df: pd.DataFrame, source_name: str = "") -> pd.DataFrame:
-    """
-    Clean a single data source before merging:
-      - Remove duplicates on (region_id, date)
-      - Fill missing temperature columns with regional monthly mean
-      - Fill missing precipitation columns with 0
-      - Print IQR outlier counts per column
-    """
-    df = df.copy()
-    df = normalize_columns(df)
-
-    key_cols = [c for c in ["region_id", "date"] if c in df.columns]
-    df = df.drop_duplicates(subset=key_cols) if key_cols else df.drop_duplicates()
-
-    if "date" in df.columns:
-        df["_month"] = pd.to_datetime(df["date"], errors="coerce").dt.month
-        temp_cols = [c for c in df.columns if "temperature" in c or ("temp" in c and c != "_month")]
-        for col in temp_cols:
-            if not pd.api.types.is_numeric_dtype(df[col]):
-                continue
-            group_keys = ["region_id", "_month"] if "region_id" in df.columns else ["_month"]
-            df[col] = df.groupby(group_keys)[col].transform(lambda s: s.fillna(s.mean()))
-            df[col] = df[col].fillna(df[col].mean())
-        df = df.drop(columns=["_month"], errors="ignore")
-
-    precip_cols = [c for c in df.columns if "precip" in c or "rain" in c]
-    for col in precip_cols:
-        if pd.api.types.is_numeric_dtype(df[col]):
-            df[col] = df[col].fillna(0.0)
-
-    _exclude_outlier_check = {"lat", "lon", "latitude", "longitude", "year", "month", "day", "hour"}
-    for col in df.select_dtypes(include=[np.number]).columns:
-        if col in _exclude_outlier_check:
-            continue
-        q1 = df[col].quantile(0.25)
-        q3 = df[col].quantile(0.75)
-        iqr = q3 - q1
-        if iqr == 0:
-            continue
-        n_out = ((df[col] < q1 - 1.5 * iqr) | (df[col] > q3 + 1.5 * iqr)).sum()
-        if n_out > 0:
-            print(f"[{source_name}] outliers in '{col}': {n_out}")
-
-    return df
-
-
 def _ensure_date(df: pd.DataFrame) -> pd.DataFrame:
     if "date" not in df.columns:
         if "datetime" in df.columns:
@@ -77,7 +31,7 @@ def _fill_missing_values(df: pd.DataFrame) -> pd.DataFrame:
 
     for col in numeric:
         df[col] = df.groupby(["region_id", "month"])[col].transform(
-            lambda series: series.fillna(series.mean())
+            lambda series: series.fillna(series.median())
         )
         df[col] = df.groupby("region_id")[col].transform(
             lambda series: series.interpolate(method="linear", limit_direction="both")
@@ -104,28 +58,17 @@ def _remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
 def _detect_outliers(df: pd.DataFrame, columns: Optional[List[str]] = None) -> pd.DataFrame:
     if columns is None:
         columns = df.select_dtypes(include=[np.number]).columns.tolist()
-
-    # Les coordonnées / métadonnées ont souvent une distribution "atypique"
-    # et n'ont pas de sens d'un point de vue outliers pour la modélisation.
-    exclude_cols = set(METADATA_EXCLUSIONS) | {"lat", "lon", "latitude", "longitude"}
-
     for col in columns:
-        if col not in df.columns:
-            continue
-        if col in exclude_cols:
-            continue
-
-        q1 = df[col].quantile(0.25)
-        q3 = df[col].quantile(0.75)
-        iqr = q3 - q1
-        lower_bound = q1 - 1.5 * iqr
-        upper_bound = q3 + 1.5 * iqr
-        outliers = (df[col] < lower_bound) | (df[col] > upper_bound)
-        print(f"Outliers in {col}: {outliers.sum()}")
-        # For now, just print; can clip or remove later
-
+        if col in df.columns:
+            q1 = df[col].quantile(0.25)
+            q3 = df[col].quantile(0.75)
+            iqr = q3 - q1
+            lower_bound = q1 - 1.5 * iqr
+            upper_bound = q3 + 1.5 * iqr
+            outliers = (df[col] < lower_bound) | (df[col] > upper_bound)
+            print(f"Outliers in {col}: {outliers.sum()}")
+            # For now, just print; can clip or remove later
     return df
-
 
 
 def _fill_missing_temperature(df: pd.DataFrame) -> pd.DataFrame:
