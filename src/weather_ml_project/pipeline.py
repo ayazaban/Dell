@@ -23,6 +23,7 @@ from weather_ml_project.features.build_features import build_features
 from weather_ml_project.models.evaluate import evaluate_models
 from weather_ml_project.models.predict import save_predictions, train_test_split_chronological
 from weather_ml_project.models.train import train_models
+from weather_ml_project.reports.calibration_report import run_calibration_report
 from weather_ml_project.utils.helpers import ensure_directory
 
 
@@ -59,9 +60,12 @@ def run_pipeline() -> None:
     print("[5/6] Entrainement des modeles (Optuna ~5 min)...", flush=True)
     model_artifacts = train_models(train_data, val_data)
 
-    print("[6/6] Evaluation et sauvegarde...", flush=True)
+    print("[6/7] Evaluation et sauvegarde...", flush=True)
     evaluate_models(model_artifacts, val_data, test_data)
     save_predictions(model_artifacts, test_data, MODEL_OUTPUT_DIR)
+
+    print("[7/7] Rapport de calibration par region...", flush=True)
+    run_calibration_report(cleaned_df, PROCESSED_ROOT.parent / "reports", FIGURES_DIR)
 
     print("\nPipeline termine. Modeles et predictions dans:", flush=True)
     print(f"  {MODEL_OUTPUT_DIR}", flush=True)

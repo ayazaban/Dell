@@ -244,26 +244,74 @@ def _bar(lo, hi, ylo, yhi, color):
 # ── Load models & history ─────────────────────────────────────────────────────
 @st.cache_resource
 def _load_models():
-    try:
-        tm = joblib.load(MODEL_DIR / "xgb_temperature.joblib")
-        pm = joblib.load(MODEL_DIR / "xgb_precipitation.joblib")
-        fc_t = list(tm.get_booster().feature_names)
-        fc_p = list(pm.get_booster().feature_names)
-        return tm, pm, fc_t, fc_p
-    except Exception:
-        return None, None, [], []
+    """Load all available source models. Returns a unified dict."""
+    md: dict = {}
+
+    for src in ["era5", "openmeteo", "nasa", "fusion"]:
+        t_path = MODEL_DIR / f"xgb_temperature_{src}.joblib"
+        p_path = MODEL_DIR / f"xgb_precipitation_{src}.joblib"
+        if not (t_path.exists() and p_path.exists()):
+            continue
+        try:
+            tm = joblib.load(t_path)
+            pm = joblib.load(p_path)
+            ft_path = MODEL_DIR / f"feature_cols_temp_{src}.joblib"
+            fp_path = MODEL_DIR / f"feature_cols_precip_{src}.joblib"
+            fc_t = joblib.load(ft_path) if ft_path.exists() else list(tm.get_booster().feature_names)
+            fc_p = joblib.load(fp_path) if fp_path.exists() else list(pm.get_booster().feature_names)
+            md[f"temperature_{src}"]         = tm
+            md[f"precipitation_{src}"]       = pm
+            md[f"feature_cols_temp_{src}"]   = fc_t
+            md[f"feature_cols_precip_{src}"] = fc_p
+        except Exception:
+            pass
+
+    # Backward-compat aliases (prefer fusion, fall back to first found)
+    for default_src in ["fusion", "era5", "openmeteo", "nasa"]:
+        if f"temperature_{default_src}" in md:
+            md["temperature"]         = md[f"temperature_{default_src}"]
+            md["precipitation"]       = md[f"precipitation_{default_src}"]
+            md["feature_cols_temp"]   = md[f"feature_cols_temp_{default_src}"]
+            md["feature_cols_precip"] = md[f"feature_cols_precip_{default_src}"]
+            md["feature_cols"]        = md[f"feature_cols_temp_{default_src}"]
+            break
+
+    # Legacy fallback: old single-model files before multi-source training
+    if "temperature" not in md:
+        try:
+            tm = joblib.load(MODEL_DIR / "xgb_temperature.joblib")
+            pm = joblib.load(MODEL_DIR / "xgb_precipitation.joblib")
+            fc_t = list(tm.get_booster().feature_names)
+            fc_p = list(pm.get_booster().feature_names)
+            md["temperature"]         = tm
+            md["precipitation"]       = pm
+            md["feature_cols_temp"]   = fc_t
+            md["feature_cols_precip"] = fc_p
+            md["feature_cols"]        = fc_t
+        except Exception:
+            pass
+
+    return md
+
 
 @st.cache_data
 def _load_hist():
     p = PROCESSED_DIR / "cleaned_data.csv"
     return pd.read_csv(p) if p.exists() else pd.DataFrame()
 
-temp_model, precip_model, feature_cols_temp, feature_cols_precip = _load_models()
-feature_cols = feature_cols_temp  # kept for any legacy display references
-hist_df = _load_hist()
+models_dict = _load_models()
+hist_df     = _load_hist()
+
+# Available source variants (for the selector)
+_SOURCES_AVAILABLE = [
+    s for s in ["fusion", "era5", "openmeteo", "nasa"]
+    if f"temperature_{s}" in models_dict
+]
+_SOURCE_LABELS = {"fusion": "Fusion (tous)", "era5": "ERA5",
+                  "openmeteo": "Open-Meteo", "nasa": "NASA POWER"}
 
 # ── Status banner ─────────────────────────────────────────────────────────────
-if temp_model is None:
+if not models_dict.get("temperature"):
     st.warning("⚠️ Modèles introuvables dans `models/`. Exécutez `python main.py` d'abord.")
 if hist_df.empty:
     st.warning("⚠️ Données historiques absentes dans `data_processed/`. Exécutez `python main.py` d'abord.")
@@ -280,8 +328,16 @@ if "_year_sel" not in st.session_state:
     _sy = st.session_state.get("_pred_year")
     st.session_state["_year_sel"] = _sy if _sy in _YEARS else _YEARS[5]
 
+if "_source_sel" not in st.session_state:
+    st.session_state["_source_sel"] = _SOURCES_AVAILABLE[0] if _SOURCES_AVAILABLE else "fusion"
+
 st.markdown('<div class="glass">', unsafe_allow_html=True)
-c1, c2, c3, c4 = st.columns([2, 2, 1.5, 1.5])
+if len(_SOURCES_AVAILABLE) > 1:
+    c1, c2, c3, c4, c5 = st.columns([2, 2, 1.2, 1.5, 1.2])
+else:
+    c1, c2, c3, c4 = st.columns([2, 2, 1.5, 1.5])
+    c5 = c4  # reuse slot — source selector won't be rendered
+
 with c1:
     user_lat = st.number_input("Latitude", format="%.4f", step=0.01,
                                help="Latitude en degrés décimaux (ex: 34.30)",
@@ -292,9 +348,22 @@ with c2:
                                key="_lon")
 with c3:
     year = st.selectbox("Année", _YEARS, key="_year_sel")
-with c4:
-    st.markdown("<br>", unsafe_allow_html=True)
-    go = st.button("🔍  Prédire", use_container_width=True)
+if len(_SOURCES_AVAILABLE) > 1:
+    with c4:
+        source = st.selectbox(
+            "Modèle",
+            _SOURCES_AVAILABLE,
+            format_func=lambda s: _SOURCE_LABELS[s] if s in _SOURCE_LABELS else s,
+            key="_source_sel",
+        )
+    with c5:
+        st.markdown("<br>", unsafe_allow_html=True)
+        go = st.button("🔍  Prédire", use_container_width=True)
+else:
+    source = st.session_state["_source_sel"]
+    with c4:
+        st.markdown("<br>", unsafe_allow_html=True)
+        go = st.button("🔍  Prédire", use_container_width=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
 # Available regions info
@@ -325,7 +394,7 @@ if not hist_df.empty:
 
 # ── Prediction: run only when button clicked AND inputs differ from cache ──────
 if go:
-    if temp_model is None or precip_model is None:
+    if not models_dict.get("temperature"):
         st.error("Modèles introuvables. Lancez `python main.py` d'abord.")
         st.stop()
     if hist_df.empty:
@@ -337,17 +406,11 @@ if go:
         and st.session_state.get("_pred_lat") == user_lat
         and st.session_state.get("_pred_lon") == user_lon
         and st.session_state.get("_pred_year") == int(year)
+        and st.session_state.get("_pred_source") == source
     )
 
     if not _same:
         rid, city, dist = find_nearest(user_lat, user_lon, hist_df)
-        models_dict = {
-            "temperature":         temp_model,
-            "precipitation":       precip_model,
-            "feature_cols_temp":   feature_cols_temp,
-            "feature_cols_precip": feature_cols_precip,
-            "feature_cols":        feature_cols_temp,
-        }
 
         NEW_LOC_THRESHOLD_KM = 50.0
         is_new_location = dist is not None and dist > NEW_LOC_THRESHOLD_KM
@@ -358,7 +421,7 @@ if go:
                 f"(station la plus proche : {rid}, {dist:.0f} km). "
                 f"Téléchargement des données Open-Meteo…"
             )
-            prog_bar  = st.progress(0.0)
+            prog_bar   = st.progress(0.0)
             status_txt = st.empty()
 
             def _cb(frac, msg):
@@ -368,9 +431,9 @@ if go:
 
             from weather_ml_project.models.predict import predict_new_location
             try:
-                df   = predict_new_location(
+                df = predict_new_location(
                     models_dict, user_lat, user_lon, int(year), hist_df,
-                    progress_callback=_cb,
+                    source=source, progress_callback=_cb,
                 )
                 city = f"{user_lat:.3f}°N, {abs(user_lon):.3f}°O"
             except Exception as e:
@@ -385,7 +448,8 @@ if go:
             with st.spinner(f"Calcul des prédictions pour {city} ({year})…"):
                 from weather_ml_project.models.predict import predict_year_for_region
                 try:
-                    df = predict_year_for_region(models_dict, rid, int(year), hist_df)
+                    df = predict_year_for_region(models_dict, rid, int(year), hist_df,
+                                                 source=source)
                 except Exception as e:
                     st.error(f"Erreur lors de la prédiction : {e}")
                     st.stop()
@@ -400,7 +464,7 @@ if go:
         st.session_state.update(
             _df=df, _rid=rid, _city=city,
             _pred_lat=user_lat, _pred_lon=user_lon, _pred_year=int(year),
-            _pred_dist=dist,
+            _pred_dist=dist, _pred_source=source,
         )
 
 # ── Display: shown whenever a prediction exists in session state ───────────────

@@ -1,0 +1,9 @@
+source,variable,rmse,r2,bias,n
+ERA5,temperature_C,0.3923,0.9984,-0.056,14774
+ERA5,precipitation_mm,5.1579,0.1347,-0.2277,14774
+Open-Meteo,temperature_C,0.3002,0.9991,-0.0168,14774
+Open-Meteo,precipitation_mm,4.9599,0.1999,-0.185,14774
+NASA POWER,temperature_C,0.3348,0.9989,-0.032,14774
+NASA POWER,precipitation_mm,4.8618,0.2312,-0.1982,14774
+Fusion (tous),temperature_C,0.3761,0.9986,-0.0525,14774
+Fusion (tous),precipitation_mm,5.0554,0.1688,-0.1811,14774
