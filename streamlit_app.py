@@ -269,16 +269,29 @@ if hist_df.empty:
     st.warning("⚠️ Données historiques absentes dans `data_processed/`. Exécutez `python main.py` d'abord.")
 
 # ── Input form ────────────────────────────────────────────────────────────────
+_YEARS = list(range(2019, 2031))
+
+# Seed widget keys from last prediction on first run of the session
+if "_lat" not in st.session_state:
+    st.session_state["_lat"] = st.session_state.get("_pred_lat", 34.30)
+if "_lon" not in st.session_state:
+    st.session_state["_lon"] = st.session_state.get("_pred_lon", -5.90)
+if "_year_sel" not in st.session_state:
+    _sy = st.session_state.get("_pred_year")
+    st.session_state["_year_sel"] = _sy if _sy in _YEARS else _YEARS[5]
+
 st.markdown('<div class="glass">', unsafe_allow_html=True)
 c1, c2, c3, c4 = st.columns([2, 2, 1.5, 1.5])
 with c1:
-    user_lat = st.number_input("Latitude", value=34.30, format="%.4f", step=0.01,
-                               help="Latitude en degrés décimaux (ex: 34.30)")
+    user_lat = st.number_input("Latitude", format="%.4f", step=0.01,
+                               help="Latitude en degrés décimaux (ex: 34.30)",
+                               key="_lat")
 with c2:
-    user_lon = st.number_input("Longitude", value=-5.90, format="%.4f", step=0.01,
-                               help="Longitude en degrés décimaux (ex: -5.90)")
+    user_lon = st.number_input("Longitude", format="%.4f", step=0.01,
+                               help="Longitude en degrés décimaux (ex: -5.90)",
+                               key="_lon")
 with c3:
-    year = st.selectbox("Année", list(range(2019, 2031)), index=5)
+    year = st.selectbox("Année", _YEARS, key="_year_sel")
 with c4:
     st.markdown("<br>", unsafe_allow_html=True)
     go = st.button("🔍  Prédire", use_container_width=True)
@@ -310,7 +323,7 @@ if not hist_df.empty:
                 idf = idf.sort_values("Distance (km)")
             st.dataframe(idf, use_container_width=True, hide_index=True)
 
-# ── Prediction ────────────────────────────────────────────────────────────────
+# ── Prediction: run only when button clicked AND inputs differ from cache ──────
 if go:
     if temp_model is None or precip_model is None:
         st.error("Modèles introuvables. Lancez `python main.py` d'abord.")
@@ -319,43 +332,101 @@ if go:
         st.error("Données historiques absentes. Lancez `python main.py` d'abord.")
         st.stop()
 
-    rid, city, dist = find_nearest(user_lat, user_lon, hist_df)
-    if dist and dist > 200:
-        st.warning(f"⚠️ La station la plus proche ({rid}) est à {dist} km de vos coordonnées.")
+    _same = (
+        "_df" in st.session_state
+        and st.session_state.get("_pred_lat") == user_lat
+        and st.session_state.get("_pred_lon") == user_lon
+        and st.session_state.get("_pred_year") == int(year)
+    )
 
-    with st.spinner(f"Calcul des prédictions pour {city} ({year})…"):
-        from weather_ml_project.models.predict import predict_year_for_region
-        try:
-            df = predict_year_for_region(
-                {"temperature": temp_model, "precipitation": precip_model,
-                 "feature_cols_temp": feature_cols_temp,
-                 "feature_cols_precip": feature_cols_precip,
-                 "feature_cols": feature_cols_temp},
-                rid, int(year), hist_df,
+    if not _same:
+        rid, city, dist = find_nearest(user_lat, user_lon, hist_df)
+        models_dict = {
+            "temperature":         temp_model,
+            "precipitation":       precip_model,
+            "feature_cols_temp":   feature_cols_temp,
+            "feature_cols_precip": feature_cols_precip,
+            "feature_cols":        feature_cols_temp,
+        }
+
+        NEW_LOC_THRESHOLD_KM = 50.0
+        is_new_location = dist is not None and dist > NEW_LOC_THRESHOLD_KM
+
+        if is_new_location:
+            st.info(
+                f"📡 Coordonnées hors des 24 stations connues "
+                f"(station la plus proche : {rid}, {dist:.0f} km). "
+                f"Téléchargement des données Open-Meteo…"
             )
-        except Exception as e:
-            st.error(f"Erreur lors de la prédiction : {e}")
-            st.stop()
+            prog_bar  = st.progress(0.0)
+            status_txt = st.empty()
 
+            def _cb(frac, msg):
+                prog_bar.progress(frac)
+                status_txt.markdown(f"<small style='color:white'>{msg}</small>",
+                                    unsafe_allow_html=True)
+
+            from weather_ml_project.models.predict import predict_new_location
+            try:
+                df   = predict_new_location(
+                    models_dict, user_lat, user_lon, int(year), hist_df,
+                    progress_callback=_cb,
+                )
+                city = f"{user_lat:.3f}°N, {abs(user_lon):.3f}°O"
+            except Exception as e:
+                st.error(f"Erreur prédiction nouvelle localisation : {e}")
+                st.stop()
+            finally:
+                prog_bar.empty()
+                status_txt.empty()
+        else:
+            if dist and dist > 0:
+                st.caption(f"📍 Station la plus proche : **{city}** ({rid}) — {dist:.0f} km")
+            with st.spinner(f"Calcul des prédictions pour {city} ({year})…"):
+                from weather_ml_project.models.predict import predict_year_for_region
+                try:
+                    df = predict_year_for_region(models_dict, rid, int(year), hist_df)
+                except Exception as e:
+                    st.error(f"Erreur lors de la prédiction : {e}")
+                    st.stop()
+
+        df["date"]  = pd.to_datetime(df["date"])
+        df["month"] = df["date"].dt.month
+        df["dow"]   = df["date"].dt.dayofweek
+
+        PRED_DIR.mkdir(exist_ok=True)
+        df.to_csv(PRED_DIR / f"predictions_{rid}_{year}.csv", index=False)
+
+        st.session_state.update(
+            _df=df, _rid=rid, _city=city,
+            _pred_lat=user_lat, _pred_lon=user_lon, _pred_year=int(year),
+            _pred_dist=dist,
+        )
+
+# ── Display: shown whenever a prediction exists in session state ───────────────
+if "_df" in st.session_state:
+    df   = st.session_state["_df"]
+    rid  = st.session_state["_rid"]
+    city = st.session_state["_city"]
+    disp_year = st.session_state["_pred_year"]
+    disp_lat  = st.session_state["_pred_lat"]
+    disp_lon  = st.session_state["_pred_lon"]
+    dist      = st.session_state.get("_pred_dist")
+
+    # Ensure derived columns exist (safe across reruns)
     df["date"]  = pd.to_datetime(df["date"])
     df["month"] = df["date"].dt.month
     df["dow"]   = df["date"].dt.dayofweek
 
-    y_lo = df["temperature_pred"].min() - 3
-    y_hi = df["temperature_pred"].max() + 3
+    y_lo     = df["temperature_pred"].min() - 3
+    y_hi     = df["temperature_pred"].max() + 3
     ann_mean = df["temperature_pred"].mean()
     ann_lo   = df["temperature_pred"].min()
     ann_hi   = df["temperature_pred"].max()
     ann_prec = df["precipitation_pred"].sum()
 
-    # Auto-save CSV
-    PRED_DIR.mkdir(exist_ok=True)
-    csv_path = PRED_DIR / f"predictions_{rid}_{year}.csv"
-    df.to_csv(csv_path, index=False)
-
-    # ── Weather header ────────────────────────────────────────────────────────
-    ew = "O" if user_lon < 0 else "E"
-    coord_line = f"{user_lat:.4f}°N, {abs(user_lon):.4f}°{ew}"
+    ew         = "O" if disp_lon < 0 else "E"
+    coord_line = f"{disp_lat:.4f}°N, {abs(disp_lon):.4f}°{ew}"
     dist_line  = f"  •  Station : {rid}" + (f" ({dist} km)" if dist else "")
     first_icon = _icon(float(df.iloc[0]["temperature_pred"]),
                        float(df.iloc[0]["precipitation_pred"]))
@@ -372,9 +443,7 @@ if go:
   </div>
 </div>""", unsafe_allow_html=True)
 
-    # ── Monthly tabs ──────────────────────────────────────────────────────────
     tabs = st.tabs(MONTHS_FR)
-
     for mi, tab in enumerate(tabs):
         m   = mi + 1
         mdf = df[df["month"] == m]
@@ -383,10 +452,10 @@ if go:
         with tab:
             rows_html = ""
             for _, row in mdf.iterrows():
-                t    = float(row["temperature_pred"])
-                p    = float(row["precipitation_pred"])
-                amp  = _amp(m)
-                lo, hi = t - amp/2, t + amp/2
+                t      = float(row["temperature_pred"])
+                p      = float(row["precipitation_pred"])
+                amp    = _amp(m)
+                lo, hi = t - amp / 2, t + amp / 2
                 ratio  = (t - ann_lo) / max(ann_hi - ann_lo, 1)
                 clr    = _color(ratio)
                 icon   = _icon(t, p)
@@ -405,52 +474,30 @@ if go:
                     f'<div class="fc-hi">{hi:.0f}°</div>'
                     f'</div>'
                 )
-
             st.markdown(
                 f'<div class="glass">'
-                f'<div class="card-label">📅 {MONTHS_FULL[mi]} {year}</div>'
+                f'<div class="card-label">📅 {MONTHS_FULL[mi]} {disp_year}</div>'
                 f'{rows_html}'
                 f'</div>',
                 unsafe_allow_html=True,
             )
-
             ca, cb, cc = st.columns(3)
             with ca:
                 st.metric("🌡️ Moy.", f"{mdf['temperature_pred'].mean():.1f} °C")
             with cb:
                 st.metric("🌧️ Précip.", f"{mdf['precipitation_pred'].sum():.1f} mm")
             with cc:
-                rainy = int((mdf["precipitation_pred"] > 1).sum())
-                st.metric("☔ Jours pluie", rainy)
+                st.metric("☔ Jours pluie", int((mdf["precipitation_pred"] > 1).sum()))
 
-    # ── Download CSV ──────────────────────────────────────────────────────────
     st.markdown("<br>", unsafe_allow_html=True)
     col_dl, col_ok = st.columns([3, 1])
     with col_dl:
         st.download_button(
-            label=f"⬇️  Télécharger CSV — {city} {year} ({len(df)} jours)",
+            label=f"⬇️  Télécharger CSV — {city} {disp_year} ({len(df)} jours)",
             data=df.to_csv(index=False).encode("utf-8"),
-            file_name=f"predictions_{rid}_{year}.csv",
+            file_name=f"predictions_{rid}_{disp_year}.csv",
             mime="text/csv",
             use_container_width=True,
         )
     with col_ok:
-        st.success(f"✅ Auto-sauvegardé\n`predictions/`")
-
-    # Persist in session state for re-download after rerun
-    st.session_state.update(
-        _df=df, _rid=rid, _city=city, _year=int(year)
-    )
-
-# ── Persistent download (after reruns without clicking Prédire) ───────────────
-elif "_df" in st.session_state:
-    df   = st.session_state["_df"]
-    rid  = st.session_state["_rid"]
-    city = st.session_state["_city"]
-    year = st.session_state["_year"]
-    st.download_button(
-        label=f"⬇️  Re-télécharger CSV — {city} {year}",
-        data=df.to_csv(index=False).encode("utf-8"),
-        file_name=f"predictions_{rid}_{year}.csv",
-        mime="text/csv",
-    )
+        st.success(f"✅ Sauvegardé\n`predictions/`")
