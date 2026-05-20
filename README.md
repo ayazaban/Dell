@@ -12,6 +12,24 @@ Projet de calibration et prédiction météo pour UM6P, intégrant ERA5, Open-Me
 - `notebooks/`: notebooks d'exploration
 - `models/`: modèles sauvegardés
 - `reports/`: graphiques et résultats
+## Features du modèle
+
+Les modèles XGBoost utilisent 82 variables d'entrée issues de quatre sources 
+fusionnées : les **données terrain** (stations physiques UM6P — température, 
+précipitations, humidité, vent et leurs décalages temporels à J-1, J-7, J-14 
+et J-28), les données **Open-Meteo**, la réanalyse **ERA5** (ECMWF) et 
+**NASA POWER**. S'y ajoutent des features temporelles cycliques (sinus/cosinus 
+du jour de l'année et du mois) ainsi que des variables dérivées comme l'anomalie 
+de température et le déficit de pression de vapeur (VPD).
+
+L'analyse SHAP révèle que la température terrain J-1 explique à elle seule ~69% 
+des prédictions de température, et la précipitation terrain J-1 explique ~51% 
+des prédictions de précipitations. Les sources satellite (ERA5, NASA, Open-Meteo) 
+contribuent collectivement à ~3–4% de l'importance — ce qui confirme que le 
+modèle effectue une **calibration locale** à partir des mesures station, plutôt 
+qu'une simple interpolation satellite. En l'absence de données station pour une 
+nouvelle région, le modèle bascule automatiquement sur ERA5 comme variable cible 
+de substitution.
 
 ## Installation
 ```bash
@@ -70,5 +88,7 @@ uvicorn api.app:app --reload --host 0.0.0.0 --port 8000
 <img width="959" height="496" alt="image" src="https://github.com/user-attachments/assets/a3786183-9c81-4810-a8d0-9ec1e43a2687" />
 ## Figures
 <img width="599" height="372" alt="image" src="https://github.com/user-attachments/assets/03bc4283-7549-4238-969d-58460a867895" />
+<img width="431" height="366" alt="image" src="https://github.com/user-attachments/assets/a002a92d-edc6-465f-8fd9-286625d3927d" />
+
 <img width="599" height="369" alt="image" src="https://github.com/user-attachments/assets/a7beeb1a-2bf4-49b3-acc9-fc99d3b3ac1f" />
 
