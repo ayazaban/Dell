@@ -41,6 +41,11 @@ poetry shell
 ## Exécution
 ```bash
 poetry run python main.py
+# Interface Streamlit
+python -m streamlit run streamlit_app.py
+
+# API REST
+uvicorn api.app:app --reload --host 0.0.0.0 --port 8000
 ```
 
 ## Notebook Colab
