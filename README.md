@@ -84,8 +84,9 @@ uvicorn api.app:app --reload --host 0.0.0.0 --port 8000
 | 🌧️ Précipitation | 4.896 mm | 0.2204   | -0.178 mm   |
 
 📌 Nombre de lignes : **14 774**
-<img width="959" height="497" alt="image" src="https://github.com/user-attachments/assets/e6f85953-a5cf-42c7-a905-d288ed596fbe" />
-<img width="959" height="496" alt="image" src="https://github.com/user-attachments/assets/a3786183-9c81-4810-a8d0-9ec1e43a2687" />
+<img width="959" height="498" alt="image" src="https://github.com/user-attachments/assets/e75fe166-c86b-4b5f-ba42-f4f580c4c986" />
+<img width="959" height="499" alt="image" src="https://github.com/user-attachments/assets/eba686df-7029-4a94-89d6-a1305a83c4d2" />
+
 ## Figures
 <img width="599" height="372" alt="image" src="https://github.com/user-attachments/assets/03bc4283-7549-4238-969d-58460a867895" />
 <img width="431" height="366" alt="image" src="https://github.com/user-attachments/assets/a002a92d-edc6-465f-8fd9-286625d3927d" />
